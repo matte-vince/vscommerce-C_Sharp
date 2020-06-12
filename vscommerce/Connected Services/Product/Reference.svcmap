@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="74c1c6b6-d33f-4709-a0b6-9512ea36c17b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductManager.wsdl" MetadataType="Wsdl" ID="56823c9a-edb8-4736-b8bb-f1cb44f4f95f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e5069674-df17-4a1b-a9b1-c64b5dba5c92" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="7dbfa035-a0e5-4e46-9e30-16c111fce335" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="bb08de3a-a387-4a9a-891a-88ecadd2f427" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="cdc95345-d7b7-49bc-a49e-3c6cf8832206" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd1" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="aad6eadb-0dfa-481d-9d41-526f86be48e5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

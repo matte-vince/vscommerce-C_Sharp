@@ -1,0 +1,7 @@
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\bin\Debug\dbManager.exe.config
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\bin\Debug\dbManager.exe
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\bin\Debug\dbManager.pdb
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\obj\Debug\dbManager.csprojAssemblyReference.cache
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\obj\Debug\dbManager.csproj.CoreCompileInputs.cache
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\obj\Debug\dbManager.exe
+C:\Users\cheema\Desktop\progetti karan\de falco\dbManager\obj\Debug\dbManager.pdb

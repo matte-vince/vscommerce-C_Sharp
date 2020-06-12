@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/UserManager/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/UserManager/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Manager" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/UserManager/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/UserManager/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManager_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_Login_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q1:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUserByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUserByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUserByEmail_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q2:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_existUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:existUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_existUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:existUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_existUser_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q3:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserById" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUserById_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q4:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_getUsers_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q5:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_updateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_updateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_updateUser_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q6:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_createUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:createUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_createUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_createUser_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q7:ManagerFault" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManager">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/Login" message="tns:IUserManager_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/LoginResponse" message="tns:IUserManager_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/LoginManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_Login_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/getUserByEmail" message="tns:IUserManager_getUserByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/getUserByEmailResponse" message="tns:IUserManager_getUserByEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/getUserByEmailManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_getUserByEmail_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="existUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/existUser" message="tns:IUserManager_existUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/existUserResponse" message="tns:IUserManager_existUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/existUserManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_existUser_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/getUserById" message="tns:IUserManager_getUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/getUserByIdResponse" message="tns:IUserManager_getUserById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/getUserByIdManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_getUserById_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/getUsers" message="tns:IUserManager_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/getUsersResponse" message="tns:IUserManager_getUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/getUsersManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_getUsers_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/updateUser" message="tns:IUserManager_updateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/updateUserResponse" message="tns:IUserManager_updateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/updateUserManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_updateUser_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/createUser" message="tns:IUserManager_createUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/createUserResponse" message="tns:IUserManager_createUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IUserManager/createUserManagerFaultFault" name="ManagerFaultFault" message="tns:IUserManager_createUser_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserManager" type="tns:IUserManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUserByEmail">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/getUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="existUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/existUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUserById">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/getUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/updateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <soap:operation soapAction="http://tempuri.org/IUserManager/createUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserManager">
+    <wsdl:port name="BasicHttpBinding_IUserManager" binding="tns:BasicHttpBinding_IUserManager">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Manager.classes/UserManager/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

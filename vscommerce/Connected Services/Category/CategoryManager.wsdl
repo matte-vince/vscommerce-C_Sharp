@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CategoryManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/CategoryManager/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/CategoryManager/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Manager" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/CategoryManager/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/CategoryManager/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICategoryManager_getCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCategories" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_getCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_getCategories_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q1:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_getCategoryById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoryById" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_getCategoryById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoryByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_getCategoryById_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q2:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_updateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCategory" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_updateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_updateCategory_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q3:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_createCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:createCategory" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_createCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICategoryManager_createCategory_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q4:ManagerFault" />
+  </wsdl:message>
+  <wsdl:portType name="ICategoryManager">
+    <wsdl:operation name="getCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryManager/getCategories" message="tns:ICategoryManager_getCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryManager/getCategoriesResponse" message="tns:ICategoryManager_getCategories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICategoryManager/getCategoriesManagerFaultFault" name="ManagerFaultFault" message="tns:ICategoryManager_getCategories_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCategoryById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryManager/getCategoryById" message="tns:ICategoryManager_getCategoryById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryManager/getCategoryByIdResponse" message="tns:ICategoryManager_getCategoryById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICategoryManager/getCategoryByIdManagerFaultFault" name="ManagerFaultFault" message="tns:ICategoryManager_getCategoryById_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryManager/updateCategory" message="tns:ICategoryManager_updateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryManager/updateCategoryResponse" message="tns:ICategoryManager_updateCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICategoryManager/updateCategoryManagerFaultFault" name="ManagerFaultFault" message="tns:ICategoryManager_updateCategory_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICategoryManager/createCategory" message="tns:ICategoryManager_createCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICategoryManager/createCategoryResponse" message="tns:ICategoryManager_createCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICategoryManager/createCategoryManagerFaultFault" name="ManagerFaultFault" message="tns:ICategoryManager_createCategory_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICategoryManager" type="tns:ICategoryManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCategories">
+      <soap:operation soapAction="http://tempuri.org/ICategoryManager/getCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCategoryById">
+      <soap:operation soapAction="http://tempuri.org/ICategoryManager/getCategoryById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCategory">
+      <soap:operation soapAction="http://tempuri.org/ICategoryManager/updateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCategory">
+      <soap:operation soapAction="http://tempuri.org/ICategoryManager/createCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CategoryManager">
+    <wsdl:port name="BasicHttpBinding_ICategoryManager" binding="tns:BasicHttpBinding_ICategoryManager">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/CategoryManager/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

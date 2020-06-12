@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DBManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDBManager_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_DoWork_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q1:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUserByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUserByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUserByEmail_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q2:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_existUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:existUser" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_existUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:existUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_existUser_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q3:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserById" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUserById_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q4:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getUsers_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q5:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getBrandById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBrandById" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getBrandById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBrandByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getBrandById_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q6:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getBrands_InputMessage">
+    <wsdl:part name="parameters" element="tns:getBrands" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getBrands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getBrandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getBrands_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q7:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getCategoryById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoryById" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getCategoryById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoryByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getCategoryById_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q8:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCategories" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getCategories_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q9:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getProductById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductById" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getProductById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getProductById_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q10:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProducts" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getProducts_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q11:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrdersByPartner_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersByPartner" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrdersByPartner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersByPartnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrdersByPartner_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q12:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrders_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q13:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrderById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderById" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrderById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getOrderByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_getOrderById_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q14:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUser" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateUser_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q15:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateBrand" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateBrand_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q16:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateCategory_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q17:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_updateProduct_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q18:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:createOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createOrder_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q19:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:createBrand" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createBrand_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q20:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:createCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createCategory_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q21:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:createProduct" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createProduct_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q22:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:createUser" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_createUser_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q23:DBFault" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_deleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_deleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBManager_deleteOrder_DBFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" name="detail" element="q24:DBFault" />
+  </wsdl:message>
+  <wsdl:portType name="IDBManager">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/DoWork" message="tns:IDBManager_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/DoWorkResponse" message="tns:IDBManager_DoWork_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/DoWorkDBFaultFault" name="DBFaultFault" message="tns:IDBManager_DoWork_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getUserByEmail" message="tns:IDBManager_getUserByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getUserByEmailResponse" message="tns:IDBManager_getUserByEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getUserByEmailDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getUserByEmail_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="existUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/existUser" message="tns:IDBManager_existUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/existUserResponse" message="tns:IDBManager_existUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/existUserDBFaultFault" name="DBFaultFault" message="tns:IDBManager_existUser_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getUserById" message="tns:IDBManager_getUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getUserByIdResponse" message="tns:IDBManager_getUserById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getUserByIdDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getUserById_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getUsers" message="tns:IDBManager_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getUsersResponse" message="tns:IDBManager_getUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getUsersDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getUsers_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBrandById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getBrandById" message="tns:IDBManager_getBrandById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getBrandByIdResponse" message="tns:IDBManager_getBrandById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getBrandByIdDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getBrandById_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getBrands">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getBrands" message="tns:IDBManager_getBrands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getBrandsResponse" message="tns:IDBManager_getBrands_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getBrandsDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getBrands_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCategoryById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getCategoryById" message="tns:IDBManager_getCategoryById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getCategoryByIdResponse" message="tns:IDBManager_getCategoryById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getCategoryByIdDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getCategoryById_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getCategories" message="tns:IDBManager_getCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getCategoriesResponse" message="tns:IDBManager_getCategories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getCategoriesDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getCategories_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getProductById" message="tns:IDBManager_getProductById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getProductByIdResponse" message="tns:IDBManager_getProductById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getProductByIdDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getProductById_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getProducts" message="tns:IDBManager_getProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getProductsResponse" message="tns:IDBManager_getProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getProductsDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getProducts_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersByPartner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getOrdersByPartner" message="tns:IDBManager_getOrdersByPartner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getOrdersByPartnerResponse" message="tns:IDBManager_getOrdersByPartner_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getOrdersByPartnerDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getOrdersByPartner_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getOrders" message="tns:IDBManager_getOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getOrdersResponse" message="tns:IDBManager_getOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getOrdersDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getOrders_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getOrderById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/getOrderById" message="tns:IDBManager_getOrderById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/getOrderByIdResponse" message="tns:IDBManager_getOrderById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/getOrderByIdDBFaultFault" name="DBFaultFault" message="tns:IDBManager_getOrderById_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/updateUser" message="tns:IDBManager_updateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/updateUserResponse" message="tns:IDBManager_updateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/updateUserDBFaultFault" name="DBFaultFault" message="tns:IDBManager_updateUser_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/updateBrand" message="tns:IDBManager_updateBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/updateBrandResponse" message="tns:IDBManager_updateBrand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/updateBrandDBFaultFault" name="DBFaultFault" message="tns:IDBManager_updateBrand_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/updateCategory" message="tns:IDBManager_updateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/updateCategoryResponse" message="tns:IDBManager_updateCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/updateCategoryDBFaultFault" name="DBFaultFault" message="tns:IDBManager_updateCategory_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/updateProduct" message="tns:IDBManager_updateProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/updateProductResponse" message="tns:IDBManager_updateProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/updateProductDBFaultFault" name="DBFaultFault" message="tns:IDBManager_updateProduct_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/createOrder" message="tns:IDBManager_createOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/createOrderResponse" message="tns:IDBManager_createOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/createOrderDBFaultFault" name="DBFaultFault" message="tns:IDBManager_createOrder_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/createBrand" message="tns:IDBManager_createBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/createBrandResponse" message="tns:IDBManager_createBrand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/createBrandDBFaultFault" name="DBFaultFault" message="tns:IDBManager_createBrand_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/createCategory" message="tns:IDBManager_createCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/createCategoryResponse" message="tns:IDBManager_createCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/createCategoryDBFaultFault" name="DBFaultFault" message="tns:IDBManager_createCategory_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/createProduct" message="tns:IDBManager_createProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/createProductResponse" message="tns:IDBManager_createProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/createProductDBFaultFault" name="DBFaultFault" message="tns:IDBManager_createProduct_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/createUser" message="tns:IDBManager_createUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/createUserResponse" message="tns:IDBManager_createUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/createUserDBFaultFault" name="DBFaultFault" message="tns:IDBManager_createUser_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBManager/deleteOrder" message="tns:IDBManager_deleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBManager/deleteOrderResponse" message="tns:IDBManager_deleteOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDBManager/deleteOrderDBFaultFault" name="DBFaultFault" message="tns:IDBManager_deleteOrder_DBFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDBManager" type="tns:IDBManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUserByEmail">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="existUser">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/existUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUserById">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBrandById">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getBrandById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBrands">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getBrands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCategoryById">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getCategoryById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCategories">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProductById">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getProductById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProducts">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrdersByPartner">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getOrdersByPartner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrders">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderById">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/getOrderById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/updateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateBrand">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/updateBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCategory">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/updateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateProduct">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/updateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createOrder">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/createOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createBrand">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/createBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createCategory">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/createCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createProduct">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/createProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/createUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IDBManager/deleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DBFaultFault">
+        <soap:fault use="literal" name="DBFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBManager">
+    <wsdl:port name="BasicHttpBinding_IDBManager" binding="tns:BasicHttpBinding_IDBManager">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

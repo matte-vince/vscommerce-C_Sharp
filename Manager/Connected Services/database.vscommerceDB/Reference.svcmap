@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6062dc0c-55f5-42c7-b399-21497ae8c4ac" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="dcfd906e-ef18-42a6-a7f2-0f463c6a4c1e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="6d748760-980e-43bc-a84a-5319c7483f6d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="025b6d5c-ed56-48ce-b3db-e7f75ffffa82" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?xsd=xsd1" />
+    <MetadataFile FileName="DBManager.wsdl" MetadataType="Wsdl" ID="f80444dc-3a03-4556-99c2-4a56a08684b9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="301d26a5-2ab7-44d1-ad03-b8cc73266204" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/dbManager.vscommerceDB/DBManager/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

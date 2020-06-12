@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Manager" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/dbManager.vscommerceDB" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductManager_getProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProducts" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_getProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_getProducts_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q1:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_getProductById_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProductById" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_getProductById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProductByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_getProductById_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q2:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_updateProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_updateProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_updateProduct_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q3:ManagerFault" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_createProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:createProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_createProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductManager_createProduct_ManagerFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Manager" name="detail" element="q4:ManagerFault" />
+  </wsdl:message>
+  <wsdl:portType name="IProductManager">
+    <wsdl:operation name="getProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManager/getProducts" message="tns:IProductManager_getProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManager/getProductsResponse" message="tns:IProductManager_getProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProductManager/getProductsManagerFaultFault" name="ManagerFaultFault" message="tns:IProductManager_getProducts_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManager/getProductById" message="tns:IProductManager_getProductById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManager/getProductByIdResponse" message="tns:IProductManager_getProductById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProductManager/getProductByIdManagerFaultFault" name="ManagerFaultFault" message="tns:IProductManager_getProductById_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManager/updateProduct" message="tns:IProductManager_updateProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManager/updateProductResponse" message="tns:IProductManager_updateProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProductManager/updateProductManagerFaultFault" name="ManagerFaultFault" message="tns:IProductManager_updateProduct_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductManager/createProduct" message="tns:IProductManager_createProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductManager/createProductResponse" message="tns:IProductManager_createProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IProductManager/createProductManagerFaultFault" name="ManagerFaultFault" message="tns:IProductManager_createProduct_ManagerFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductManager" type="tns:IProductManager">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getProducts">
+      <soap:operation soapAction="http://tempuri.org/IProductManager/getProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getProductById">
+      <soap:operation soapAction="http://tempuri.org/IProductManager/getProductById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateProduct">
+      <soap:operation soapAction="http://tempuri.org/IProductManager/updateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createProduct">
+      <soap:operation soapAction="http://tempuri.org/IProductManager/createProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ManagerFaultFault">
+        <soap:fault use="literal" name="ManagerFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductManager">
+    <wsdl:port name="BasicHttpBinding_IProductManager" binding="tns:BasicHttpBinding_IProductManager">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Manager.classes/ProductManager/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1357f9d0-17ef-495a-89df-ccd0ef677142" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BrandManager.wsdl" MetadataType="Wsdl" ID="f2b2abed-b2f5-4051-9776-bb916a735447" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="d85a014e-fc03-4ea4-ab1c-b9b3ef4b36bc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="6726c0fe-4ea0-4802-8f1b-907aaf5d9add" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="be059b29-6f91-4543-be4a-f4db4b620a9c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="c4c356aa-cbad-48cc-929f-236c7ae583b3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/?xsd=xsd1" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="97dbe247-0002-4931-8e8c-fa7c7aa81986" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/Manager.interfaces/BrandManager/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
